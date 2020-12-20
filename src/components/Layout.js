@@ -22,33 +22,6 @@ export const Table = (props) => (
     <div>{props.children}</div>
   </TableColor>
 );
-export const Indent = styled.div`
-  width:  90%;
-  margin: 0 auto;
-`;
-export const SmallText = styled.div`
-    top : center;
-    left :center;
-    white-Space : pre-line;
-    font-size : 15px;
-    color : #efefef;`;
-
-export const HeaderText = styled.div`
-    padding-top: 10px;
-    top : center;
-    left :center;
-    white-Space : pre-line;
-    font-size : 50px;
-    color : #efefef;
-`;
-export const PageTitleText = styled.div`
-    top : center;
-    left :center;
-    text-align : center;
-    white-Space : pre-line;
-    font-size : 80px;
-    color : #efefef;
-`;
 export const NotFound = styled.div`
     background: url(${background}) no-repeat;
     background-size: 100% 100%;
@@ -63,3 +36,26 @@ export const NotFound = styled.div`
     top: 0;
     left: 0;
 `;
+export const Indent = styled.div`
+  width:  90%;
+  margin: 0 auto;
+`;
+export const SmallText = styled.div`
+    white-Space : pre-wrap;
+    font-size: clamp(.5em, 1em, 5vw);
+    color : #efefef;
+`;
+export const HeaderText = styled.div`
+    white-Space : pre-wrap;
+    font-size: clamp(1em, 1.5em, 10vw);
+    color : #efefef;
+`;
+export const PageTitleText = styled.div`
+    text-align : center;
+    white-Space : pre-wrap;
+    font-size: clamp(2em, 2em, 15vw);
+    color : #efefef;
+`;//clamp(MIN, VAL, MAX) To use clamp() enter three values: a minimum value, ideal value (from which to calculate), and maximum value.
+//The max() function selects the largest value from a list of comma-separated expressions.
+//min(1rem, 50%, 10vw), the browser calculates which of these relative units is the smallest, and uses that value as the actual value.
+
